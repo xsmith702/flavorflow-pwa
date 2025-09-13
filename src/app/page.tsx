@@ -1,103 +1,207 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { 
+  ArchiveBoxIcon, 
+  BookOpenIcon, 
+  ChartBarIcon,
+  ClockIcon,
+  SparklesIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 sm:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">
+              <span className="text-gradient">Transform Your</span>
+              <br />
+              <span className="text-white">Cooking Experience</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+              Smart pantry management meets intelligent recipe discovery. 
+              Cook with confidence, reduce waste, and discover amazing meals 
+              from ingredients you already have.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/pantry"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <ArchiveBoxIcon className="h-5 w-5 mr-2" />
+                Manage Pantry
+              </Link>
+              <Link
+                href="/recipes"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <BookOpenIcon className="h-5 w-5 mr-2" />
+                Discover Recipes
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-to-b from-transparent to-black/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Everything You Need to Cook Smart
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Powerful features designed to make cooking more efficient, 
+              enjoyable, and sustainable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Pantry Management */}
+            <Link href="/pantry" className="group">
+              <div className="glass-hover rounded-2xl p-8 h-full">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-200">
+                  <ArchiveBoxIcon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Smart Pantry</h3>
+                <p className="text-gray-300 mb-4">
+                  Track ingredients, monitor expiration dates, and get low-stock alerts. 
+                  Never run out of essentials again.
+                </p>
+                <div className="flex items-center text-orange-400 text-sm font-medium">
+                  Manage pantry
+                  <svg className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* Recipe Discovery */}
+            <Link href="/recipes" className="group">
+              <div className="glass-hover rounded-2xl p-8 h-full">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-200">
+                  <BookOpenIcon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Recipe Discovery</h3>
+                <p className="text-gray-300 mb-4">
+                  Find perfect recipes based on your available ingredients. 
+                  Discover new flavors and cooking techniques.
+                </p>
+                <div className="flex items-center text-indigo-400 text-sm font-medium">
+                  Explore recipes
+                  <svg className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* Analytics */}
+            <div className="group">
+              <div className="glass-hover rounded-2xl p-8 h-full">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-200">
+                  <ChartBarIcon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Smart Analytics</h3>
+                <p className="text-gray-300 mb-4">
+                  Track your cooking patterns, reduce food waste, and optimize 
+                  your grocery shopping with data-driven insights.
+                </p>
+                <div className="flex items-center text-cyan-400 text-sm font-medium">
+                  Coming soon
+                  <SparklesIcon className="ml-2 h-4 w-4" />
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="group">
+              <div className="glass-hover rounded-2xl p-8 h-full">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-200">
+                  <ClockIcon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>
+                <p className="text-gray-300 mb-4">
+                  Fast ingredient scanning, one-tap recipe suggestions, 
+                  and instant meal planning for busy lifestyles.
+                </p>
+                <div className="flex items-center text-green-400 text-sm font-medium">
+                  Coming soon
+                  <SparklesIcon className="ml-2 h-4 w-4" />
+                </div>
+              </div>
+            </div>
+
+            {/* Collaboration */}
+            <div className="group">
+              <div className="glass-hover rounded-2xl p-8 h-full">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-200">
+                  <UserGroupIcon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Family Sharing</h3>
+                <p className="text-gray-300 mb-4">
+                  Share your pantry and recipes with family members. 
+                  Coordinate meal planning and shopping together.
+                </p>
+                <div className="flex items-center text-pink-400 text-sm font-medium">
+                  Coming soon
+                  <SparklesIcon className="ml-2 h-4 w-4" />
+                </div>
+              </div>
+            </div>
+
+            {/* AI Assistant */}
+            <div className="group">
+              <div className="glass-hover rounded-2xl p-8 h-full">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-200">
+                  <SparklesIcon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Assistant</h3>
+                <p className="text-gray-300 mb-4">
+                  Get personalized cooking tips, ingredient substitutions, 
+                  and smart recommendations powered by AI.
+                </p>
+                <div className="flex items-center text-yellow-400 text-sm font-medium">
+                  Coming soon
+                  <SparklesIcon className="ml-2 h-4 w-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Cooking?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of home cooks who are already cooking smarter, 
+              wasting less, and enjoying more delicious meals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/pantry"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Start with Pantry
+              </Link>
+              <Link
+                href="/recipes"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Browse Recipes
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
