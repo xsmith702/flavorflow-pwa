@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ToastViewport } from '@/components/ui/Toast';
 import { Navigation } from '@/components/Navigation';
+import { PWAInstallPrompt } from '@/components/PWAInstallPrompt';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -73,6 +74,7 @@ export default function RootLayout({
           </main>
         </div>
         <ToastViewport />
+        <PWAInstallPrompt />
         <script
           dangerouslySetInnerHTML={{
             __html: `
