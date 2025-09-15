@@ -28,11 +28,11 @@ export function Button({
   };
   
   const sizes: Record<string, string> = {
-    xs: 'h-7 px-2 text-xs',
-    sm: 'h-8 px-3 text-sm',
-    md: 'h-10 px-4 text-sm',
-    lg: 'h-12 px-6 text-base',
-    xl: 'h-14 px-8 text-lg',
+    xs: 'h-8 px-2 text-xs min-h-[44px]',
+    sm: 'h-9 px-3 text-sm min-h-[44px]',
+    md: 'h-10 px-4 text-sm min-h-[44px]',
+    lg: 'h-12 px-6 text-base min-h-[44px]',
+    xl: 'h-14 px-8 text-lg min-h-[44px]',
   };
 
   const isDisabled = disabled || loading;

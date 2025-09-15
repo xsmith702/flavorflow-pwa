@@ -77,6 +77,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Ensure touch targets are at least 44px */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    padding-inline: 1rem;
+  }
+  
+  /* Prevent horizontal scroll */
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+}
+
 /* Modern Background with Animated Gradients */
 body::before {
   content: '';

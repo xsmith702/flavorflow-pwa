@@ -66,10 +66,10 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#f97316" />
         <meta name="msapplication-tap-highlight" content="no" />
       </head>
-      <body className="font-sans antialiased">
-        <div className="min-h-screen flex flex-col">
+      <body className="font-sans antialiased overflow-x-hidden">
+        <div className="min-h-screen flex flex-col overflow-x-hidden">
           <Navigation />
-          <main className="flex-1">
+          <main className="flex-1 overflow-x-hidden">
             {children}
           </main>
         </div>

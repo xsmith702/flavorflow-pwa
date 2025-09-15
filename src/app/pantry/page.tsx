@@ -168,43 +168,43 @@ export default function PantryPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-6 sm:py-8">
         {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-6">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 gap-4">
             <div className="flex items-center space-x-3">
-              <div className="p-3 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
-                <ArchiveBoxIcon className="h-8 w-8 text-white" />
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
+                <ArchiveBoxIcon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white">Smart Pantry</h1>
-                <p className="text-gray-400">Manage your ingredients intelligently</p>
+                <h1 className="text-2xl sm:text-3xl font-bold text-white">Smart Pantry</h1>
+                <p className="text-sm sm:text-base text-gray-400">Manage your ingredients intelligently</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="flex items-center bg-gray-800 rounded-lg p-1">
                 <Button
                   onClick={() => setViewMode('cards')}
                   variant={viewMode === 'cards' ? 'primary' : 'ghost'}
                   size="sm"
-                  className="h-10 w-10 p-0"
+                  className="h-8 w-8 sm:h-10 sm:w-10 p-0 touch-manipulation"
                 >
-                  <Squares2X2Icon className="h-5 w-5" />
+                  <Squares2X2Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
                 <Button
                   onClick={() => setViewMode('rows')}
                   variant={viewMode === 'rows' ? 'primary' : 'ghost'}
                   size="sm"
-                  className="h-10 w-10 p-0"
+                  className="h-8 w-8 sm:h-10 sm:w-10 p-0 touch-manipulation"
                 >
-                  <ListBulletIcon className="h-5 w-5" />
+                  <ListBulletIcon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </div>
               <Button
                 onClick={onSync}
                 variant="outline"
                 size="sm"
-                className="hidden sm:flex"
+                className="hidden sm:flex touch-manipulation min-h-[36px]"
               >
                 <CloudArrowUpIcon className="h-4 w-4 mr-2" />
                 Sync
@@ -213,9 +213,11 @@ export default function PantryPage() {
                 onClick={() => setQuickOpen(true)}
                 variant="primary"
                 size="sm"
+                className="touch-manipulation min-h-[36px] sm:min-h-[40px]"
               >
                 <PlusIcon className="h-4 w-4 mr-2" />
-                Add Item
+                <span className="hidden sm:inline">Add Item</span>
+                <span className="sm:hidden">Add</span>
               </Button>
             </div>
           </div>
